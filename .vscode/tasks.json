@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compila C++",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "TestFile.cpp",
+                "-o",
+                "programma"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
