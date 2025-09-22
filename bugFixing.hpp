@@ -17,6 +17,8 @@ public:
     void setCenter(float x, float y) { centerX = x; centerY = y; }
 };
 
+class Rover;
+
 class Payload {
 private:
     bool mounted = false;
