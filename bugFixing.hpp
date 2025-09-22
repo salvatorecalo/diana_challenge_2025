@@ -65,7 +65,7 @@ class BeachUmbrella : public Circle {
         return true;
     }
 
-}
+};
 
 class Spot : public Circle {
     private:
