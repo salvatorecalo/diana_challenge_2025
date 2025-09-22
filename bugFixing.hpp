@@ -133,7 +133,7 @@ private:
     Rover *rover;
     std::thread grabbingThread;
 public:
-    void use(Circle &circle, Rover &rover) override {
+    void use(Circle &circle, Rover &rover) {
         this->rover = &rover;
         if (circle.getX() != rover.getX() || circle.getY() != rover.getY()) {
             throw std::logic_error("Rover must be on top of the object to grab it");
@@ -179,7 +179,7 @@ class Drone : public Payload {
     float altitude = 1000;
 public:
 
-    bool use(Circle &circle, Rover &rover) override {
+    bool use(Circle &circle, Rover &rover) {
         std::cout << "Drone Take off" << std::endl;
         if (altitude > MAX_ALTITUDE){
             throw std::logic_error("The Drone went too high and the wind made it crash (True Story)");
@@ -193,7 +193,7 @@ public:
                 throw std::logic_error("Rover already has a target spot");
             }
             std::cout << "Spot is free, Rover is moving to the spot" << std::endl;
-            rover.moveTo(spot->centerX, spot->centerY);
+            rover.moveTo(spot->getX(), spot->getY());
             spot->occupy();
             rover.setHaveASpot(true);
         } else {
