@@ -181,7 +181,7 @@ class Drone : public Payload {
     float altitude = 1000;
 public:
 
-    bool use(Circle &circle, Rover &rover) {
+    void use(Circle &circle, Rover &rover) {
         std::cout << "Drone Take off" << std::endl;
         if (altitude > MAX_ALTITUDE){
             throw std::logic_error("The Drone went too high and the wind made it crash (True Story)");
