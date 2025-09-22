@@ -1,6 +1,8 @@
 #include <iostream>
 #include <thread>
+#include <cmath>
 #define MAX_ALTITUDE 100
+#define M_PI 3.14
 
 class Circle {
     float centerX, centerY, radius;
