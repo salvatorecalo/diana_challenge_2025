@@ -93,7 +93,7 @@ private:
     bool haveASpot = false;
 public:
     
-    void movTo(float newX, float newY) {
+    void moveTo(float newX, float newY) {
         std::cout << "Rover moved to (" << newX << ", " << newY << ")" << std::endl;
     }
 
